@@ -1,0 +1,31 @@
+
+```{r}
+library(dplyr)
+library(purrr)
+```
+
+```{r}
+stats <- read.csv('Inputs/KenPom Barttorvik.csv')
+heat_check <- read.csv('Inputs/Heat Check Tournament Index.csv')
+```
+
+
+```{r}
+df <- merge(x = stats, 
+            y = heat_check, 
+            by = c("YEAR", "TEAM.NO", "TEAM", "SEED", "ROUND"), 
+            all.x = TRUE)
+
+df <- na.omit(df)
+
+desired_cols <- c("YEAR", "TEAM", "SEED", "K.TEMPO", "KADJ.O", "KADJ.D", "BARTHAG", "WIN.", "FTR", "TOV.", "OREB.", "X3PT.", "X3PT.D", "FT.", "WINS", 
+                  "DRAW", "POOL.VALUE", "POWER.PATH")
+
+df <- df[desired_cols]
+```
+
+
+```{r}
+write.csv(df, "march_madness_aggregate.csv")
+```
+
