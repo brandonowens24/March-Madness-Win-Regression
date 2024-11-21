@@ -18,8 +18,7 @@ df <- merge(x = stats,
 
 df <- na.omit(df)
 
-desired_cols <- c("YEAR", "TEAM", "SEED", "K.TEMPO", "KADJ.O", "KADJ.D", "BARTHAG", "WIN.", "FTR", "TOV.", "OREB.", "X3PT.", "X3PT.D", "FT.", "WINS", 
-                  "DRAW", "POOL.VALUE", "POWER.PATH")
+desired_cols <- c("YEAR", "TEAM", "SEED", "K.TEMPO", "KADJ.O", "KADJ.D", "KADJ.EM", "BARTHAG", "WIN.", "FTR", "FTRD", "TOV.", "TOV.D", "OREB.", "DREB.", "X3PT.", "X3PT.D", "AST.", "EXP", "ELITE SOS", "FT.", "WINS", "POWER", "PATH")
 
 df <- df[desired_cols]
 ```
