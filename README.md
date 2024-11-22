@@ -8,6 +8,7 @@
 * See `Simple Linear Regression-March Madness.pdf` for complete breakdown.
 ![SAS Plots I](Inputs/Best-Model-Plots1.png)
 ![SAS Plots II](Inputs/Best-Model-Plots2.png)
+![SAS Plots III](Inputs/Best-Model-Plots3.png)
 
 
 ## Data
