@@ -4,13 +4,16 @@ library(dplyr)
 library(purrr)
 ```
 
-```{r}
+# Load in Data
+
+```{r load_data}
 stats <- read.csv('Inputs/KenPom Barttorvik.csv')
 heat_check <- read.csv('Inputs/Heat Check Tournament Index.csv')
 ```
 
+# Merge Data
 
-```{r}
+```{r merge_data}
 df <- merge(x = stats, 
             y = heat_check, 
             by = c("YEAR", "TEAM.NO", "TEAM", "SEED", "ROUND"), 
@@ -26,8 +29,9 @@ names(df) <- gsub("\\.", "_", names(df))
 
 ```
 
+# Output Data
 
-```{r}
+```{r output_data}
 write.csv(df, "march_madness_aggregate.csv")
 ```
 
